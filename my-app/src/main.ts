@@ -1,13 +1,20 @@
-import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { BrowserModule } from '@angular/platform-browser'; // Module = set of build-in log.
+import { Component, NgModule } from '@angular/core';
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
+@Component({
+  selector: '.app-root',
+  template: '<h1> Hello Angular<h1>',
+})
+class FirstComponent {}
 
-if (environment.production) {
-  enableProdMode();
-}
+@NgModule({
+  declarations: [FirstComponent],
+  imports: [BrowserModule],
+  bootstrap: [FirstComponent],
+})
+class FirstModule {}
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
+platformBrowserDynamic().bootstrapModule(FirstModule);
+
+// document.getElementsByClassName('app-root')[0].innerHTML = 'Hello World...!';
