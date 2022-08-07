@@ -22,6 +22,6 @@ import { ProductsComponent } from './components/products/products.component';
     ProductsComponent,
   ], // list of Compo, . . .
   imports: [BrowserModule],
-  bootstrap: [FirstComponent],
+  bootstrap: [FirstComponent], // root Component
 })
 export class FirstModule {}
