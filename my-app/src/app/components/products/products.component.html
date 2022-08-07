@@ -1,22 +1,47 @@
 <div class="cls" id="div3">
   <!-- Data binding : interpollation {{ var / exp }} -->
   <h1 align="center">{{ title }}</h1>
-  <!-- <h1>{{ 2 + 3 }}</h1> -->
 
-  <h2>{{ names }}</h2>
-  <!-- for(let name of names){
+  <!-- <h2>{{ names }}</h2> -->
 
-} -->
-  <!-- <label for=""></label> -->
-  <!-- <body text="data inH" style="data beaut"   *ngIf="data pro" -->
   <!-- Directive : *ngIf="data pro/manu/contro/op" -->
-  <h2 *ngFor="let name of names">Sutdent Name : {{ name }}</h2>
+  <!-- <h2 *ngFor="let name of names">Sutdent Name : {{ name }}</h2>
 
   <h1>Product Name : {{ product.prdName }}</h1>
-  <h1>Product Id : {{ product.prdId }}</h1>
+  <h1>Product Id : {{ product.prdId }}</h1> -->
 
-  <div *ngFor="let product of products">
+  <div *ngFor="let product of products" class="prd-cart">
     <h3>Product Name : {{ product.prdName }}</h3>
     <h3>Product Id : {{ product.prdId }}</h3>
+    <h3 *ngIf="product.inStock > 0; else outOfStock">
+      Product in-stock : {{ product.inStock }}
+    </h3>
+    <ng-template #outOfStock>
+      <h3>Product out of stock</h3>
+    </ng-template>
+    <span [ngSwitch]="product.country">
+      Made in :
+
+      <img
+        *ngSwitchCase="'Australia'"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
+        width="24"
+      />
+      <img
+        *ngSwitchCase="'Germany'"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
+        width="24"
+      />
+      <img
+        *ngSwitchCase="'India'"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/23px-Flag_of_India.svg.png"
+        width="24"
+      />
+      <img
+        *ngSwitchDefault
+        src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/256/Flag_of_Japan.png"
+        width="24"
+      />
+    </span>
   </div>
 </div>

@@ -17,14 +17,20 @@ export class ProductsComponent {
     {
       prdName: 'Mobile',
       prdId: 1001,
+      inStock: 8,
+      country: 'India',
     },
     {
       prdName: 'Laptop',
       prdId: 1002,
+      inStock: 10,
+      country: 'Australia',
     },
     {
       prdName: 'Book',
       prdId: 1003,
+      inStock: 0,
+      country: '',
     },
   ];
 }

@@ -1,0 +1,12 @@
+.cls {
+  height: 700px;
+}
+
+.prd-cart {
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0 0 5px orange;
+  font-family: fangsong;
+}
