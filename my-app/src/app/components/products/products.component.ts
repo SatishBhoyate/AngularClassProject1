@@ -1,41 +1,22 @@
 import { Component } from '@angular/core';
 
+import { PRODUCTS } from './../../data/products';
+import { Products } from './../../model/products.model';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent {
-  title = 'Products goes here..';
-  names = ['Alex', 'Ali', 'Ashitosh'];
+  title: string = 'Products goes here..';
+
   product = {
     prdName: 'Mobile',
     prdId: 1001,
   };
 
-  products = [
-    {
-      prdName: 'Mobile',
-      prdId: 1001,
-      inStock: 8,
-      country: 'India',
-      prdImg: './../../assets/images/sample-1.jpg',
-    },
-    {
-      prdName: 'Laptop',
-      prdId: 1002,
-      inStock: 10,
-      country: 'Australia',
-      prdImg: './../../assets/images/sample-1.jpg',
-    },
-    {
-      prdName: 'Book',
-      prdId: 1003,
-      inStock: 0,
-      country: '',
-      prdImg: './../../assets/images/sample-1.jpg',
-    },
-  ];
+  products: Products[] = PRODUCTS;
 
   calcProds() {
     let sum = 0;

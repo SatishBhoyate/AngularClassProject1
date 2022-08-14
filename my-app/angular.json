@@ -86,7 +86,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/app/assets"],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "node_modules/al-rukh/css/materialize.min.css",
               "node_modules/al-rukh/css/style.css",
