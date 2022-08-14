@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-banner-three',
   templateUrl: './banner-three.component.html',
-  styleUrls: ['./banner-three.component.css']
+  styles: [
+  ]
 })
 export class BannerThreeComponent implements OnInit {
 

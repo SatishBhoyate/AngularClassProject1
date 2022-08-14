@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-banner-one',
-  templateUrl: './banner-one.component.html',
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
   styles: [
   ]
 })
-export class BannerOneComponent implements OnInit {
+export class NavComponent implements OnInit {
 
   constructor() { }
 

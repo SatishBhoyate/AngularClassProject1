@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-import { HeaderComponent } from './layouts/header/header.component';
+import { NavComponent } from './layouts/nav/nav.component';
 import { ProductsComponent } from './layouts/products/products.component';
 import { BannerOneComponent } from './layouts/banner-one/banner-one.component';
 import { BannerTwoComponent } from './layouts/banner-two/banner-two.component';
@@ -14,17 +14,15 @@ import { ContactUsComponent } from './layouts/contact-us/contact-us.component';
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent,
+    NavComponent,
     ProductsComponent,
     BannerOneComponent,
     BannerTwoComponent,
     BannerThreeComponent,
-    ContactUsComponent
+    ContactUsComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

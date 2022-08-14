@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { PRODUCTS } from './../../data/products';
+import { Products } from './../../model/products.model';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent {
+  title: string = 'Products goes here..';
 
-  constructor() { }
+  product = {
+    prdName: 'Mobile',
+    prdId: 1001,
+  };
 
-  ngOnInit(): void {
+  products: Products[] = PRODUCTS;
+
+  calcProds() {
+    let sum = 0;
+    for (let prod of this.products) {
+      sum = sum + prod.inStock;
+    }
+    return sum;
   }
-
 }
