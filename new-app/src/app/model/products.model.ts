@@ -4,4 +4,6 @@ export interface Products {
   inStock: number;
   country: string;
   prdImg: string;
+  prdColor: string;
+  isOutOfStock: boolean;
 }

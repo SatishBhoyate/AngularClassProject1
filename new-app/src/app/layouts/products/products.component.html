@@ -3,19 +3,21 @@
     <!--   Icon Section   -->
     <div class="row">
       <!-- Start : row -->
-
+      <h1>We have {{ calcProds() }} in stock...!</h1>
       <div *ngFor="let product of products">
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
               <img src="../../../assets/img/sample-1.jpg" />
-              <span class="card-title">{{ product.name }}</span>
+              <span class="card-title">{{ product.prdName }}</span>
               <a class="btn-floating halfway-fab waves-effect waves-light red"
                 ><i class="material-icons">add</i></a
               >
             </div>
-            <div class="card-content">
-              <p>Product Name : {{ product.prdName }}</p>
+            <div class="card-content" [class.prd-color]="product.inStock">
+              <p [style.color]="product.prdColor">
+                Product Name : {{ product.prdName }}
+              </p>
               <p>Product Id : {{ product.prdId }}</p>
               <p *ngIf="product.inStock > 0; else outOfStock">
                 Product in-stock : {{ product.inStock }}
