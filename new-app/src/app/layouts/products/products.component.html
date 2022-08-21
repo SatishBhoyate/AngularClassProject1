@@ -11,14 +11,14 @@
               <!-- <img src="sample-1.jpg" /> -->
               <!-- <img src="./../../../assets/img/{{ product.prdImg }}" /> -->
               <img [src]="product.prdImg" />
-              <span class="card-title">{{ product.prdName }}</span>
+              <span class="card-title">{{ product.prdName | uppercase }}</span>
               <a class="btn-floating halfway-fab waves-effect waves-light red"
                 ><i class="material-icons">add</i></a
               >
             </div>
             <div class="card-content" [class.prd-color]="product.inStock">
               <p [style.color]="product.prdColor">
-                Product Name : {{ product.prdName }}
+                Product Name : {{ product.prdName | lowercase }}
               </p>
               <p>Product Id : {{ product.prdId }}</p>
               <p *ngIf="product.inStock > 0; else outOfStock">
@@ -27,6 +27,12 @@
               <ng-template #outOfStock>
                 <p>Product out of stock</p>
               </ng-template>
+
+              <p>
+                price : <s> {{ product.price | currency: "INR" }}</s>
+              </p>
+              <p>Our price : {{ product.price | offer | currency: "INR" }}</p>
+              <!-- offer(product.price) -->
               <span [ngSwitch]="product.country">
                 Made in :
 

@@ -7,4 +7,5 @@ export interface Products {
   prdColor: string;
   isOutOfStock: boolean;
   qntt: number;
+  price: number;
 }

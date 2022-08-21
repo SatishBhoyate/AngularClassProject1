@@ -11,6 +11,7 @@ import { BannerTwoComponent } from './layouts/banner-two/banner-two.component';
 import { BannerThreeComponent } from './layouts/banner-three/banner-three.component';
 import { ContactUsComponent } from './layouts/contact-us/contact-us.component';
 import { SharedService } from './services/shared.service';
+import { OfferPipe } from './pipes/offer.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SharedService } from './services/shared.service';
     BannerTwoComponent,
     BannerThreeComponent,
     ContactUsComponent,
+    OfferPipe,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [SharedService],

@@ -23,6 +23,14 @@ export class ProductsComponent {
 
   products: Products[] = PRODUCTS;
 
+  /*
+  lificy
+  dir
+  routes
+  api
+  forms
+  */
+
   addPrd(prd) {
     // console.log(' prd', prd);
     if (prd.qntt < prd.inStock) prd.qntt++;
