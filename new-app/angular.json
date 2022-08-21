@@ -28,7 +28,8 @@
             "scripts": [
               "node_modules/al-rukh/js/jquery-2.1.1.min.js",
               "node_modules/al-rukh/js/materialize.min.js",
-              "node_modules/al-rukh/js/init.js"
+              "node_modules/al-rukh/js/init.js",
+              "./src/assets/script/script.js"
             ]
           },
           "configurations": {
@@ -95,7 +96,8 @@
             "scripts": [
               "node_modules/al-rukh/js/jquery-2.1.1.min.js",
               "node_modules/al-rukh/js/materialize.min.js",
-              "node_modules/al-rukh/js/init.js"
+              "node_modules/al-rukh/js/init.js",
+              "./src/assets/script/script.js"
             ]
           }
         },
