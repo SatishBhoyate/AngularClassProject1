@@ -6,4 +6,5 @@ export interface Products {
   prdImg: string;
   prdColor: string;
   isOutOfStock: boolean;
+  qntt: number;
 }

@@ -9,6 +9,7 @@ export const PRODUCTS: Products[] = [
     prdColor: 'red',
     isOutOfStock: false,
     prdImg: '../../../assets/img/1.jpeg',
+    qntt: 0,
   },
   {
     prdName: 'Laptop',
@@ -18,6 +19,7 @@ export const PRODUCTS: Products[] = [
     prdColor: 'green',
     isOutOfStock: true,
     prdImg: '../../../assets/img/2.jpeg',
+    qntt: 0,
   },
   {
     prdName: 'Book',
@@ -27,5 +29,6 @@ export const PRODUCTS: Products[] = [
     prdColor: 'blue',
     isOutOfStock: true,
     prdImg: '../../../assets/img/3.jpeg',
+    qntt: 0,
   },
 ];

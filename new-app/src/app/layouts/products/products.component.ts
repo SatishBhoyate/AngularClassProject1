@@ -24,4 +24,16 @@ export class ProductsComponent {
     }
     return sum;
   }
+
+  addPrd(prd) {
+    // console.log(' prd', prd);
+    if (prd.qntt < prd.inStock) prd.qntt++;
+    // alert('add prd');
+  }
+
+  removePrd(prd) {
+    if (prd.qntt !== 0) prd.qntt--;
+    // console.log(' prd', prd);
+    // alert('remove prd');
+  }
 }

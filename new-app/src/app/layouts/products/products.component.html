@@ -8,6 +8,8 @@
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
+              <!-- <img src="sample-1.jpg" /> -->
+              <!-- <img src="./../../../assets/img/{{ product.prdImg }}" /> -->
               <img [src]="product.prdImg" />
               <span class="card-title">{{ product.prdName }}</span>
               <a class="btn-floating halfway-fab waves-effect waves-light red"
@@ -49,6 +51,21 @@
                   width="24"
                 />
               </span>
+
+              <p align="center">
+                <a
+                  class="waves-effect waves-light btn"
+                  (click)="addPrd(product)"
+                  ><i class="material-icons">add</i></a
+                >
+
+                {{ product.qntt }}
+                <a
+                  class="waves-effect waves-light btn"
+                  (click)="removePrd(product)"
+                  ><i class="material-icons">remove</i></a
+                >
+              </p>
             </div>
           </div>
         </div>
