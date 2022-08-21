@@ -14,7 +14,7 @@ export const PRODUCTS: Products[] = [
   {
     prdName: 'Laptop',
     prdId: 1002,
-    inStock: 10,
+    inStock: 1000,
     country: 'Australia',
     prdColor: 'green',
     isOutOfStock: true,

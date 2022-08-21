@@ -60,6 +60,7 @@
                 >
 
                 {{ product.qntt }}
+                <input [(ngModel)]="product.qntt" />
                 <a
                   class="waves-effect waves-light btn"
                   (click)="removePrd(product)"
