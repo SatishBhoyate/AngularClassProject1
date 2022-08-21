@@ -1,3 +1,4 @@
+import { SharedService } from './../../services/shared.service';
 import { Component } from '@angular/core';
 
 import { PRODUCTS } from './../../data/products';
@@ -8,6 +9,11 @@ import { Products } from './../../model/products.model';
   templateUrl: './products.component.html',
 })
 export class ProductsComponent {
+  totPrds: number = 0;
+  // var sharedService = new SharedService();
+  constructor(private sharedService: SharedService) {
+    this.totPrds = this.sharedService.calcProds(this.products);
+  } // D.I.
   title: string = 'Products goes here..';
 
   product = {
@@ -16,14 +22,6 @@ export class ProductsComponent {
   };
 
   products: Products[] = PRODUCTS;
-
-  calcProds() {
-    let sum = 0;
-    for (let prod of this.products) {
-      sum = sum + prod.inStock;
-    }
-    return sum;
-  }
 
   addPrd(prd) {
     // console.log(' prd', prd);
